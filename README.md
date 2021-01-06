@@ -1,3 +1,90 @@
-# Oracle MySQL 5.7 CIS Overlay
+# oracle-mysql-ee-5.7-cis-overlay
+InSpec profile overlay to validate the secure configuration of Oracle MySQL EE 5.7 against [CIS's](https://www.cisecurity.org/cis-benchmarks/) Oracle MySQL EE 5.7 Benchmark 1.0.0.
 
-Overlay for the baseline InSpec profile at https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline with modifications based on provided requirements.
+## Getting Started  
+It is intended and recommended that InSpec and this profile overlay be run from a __"runner"__ host (such as a DevOps orchestration server, an administrative management system, or a developer's workstation/laptop) against the target.
+
+__For the best security of the runner, always install on the runner the _latest version_ of InSpec and supporting Ruby language components.__ 
+
+Latest versions and installation options are available at the [InSpec](http://inspec.io/) site.
+
+Git is required to download the latest InSpec profiles using the instructions below. Git can be downloaded from the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) site. 
+
+## Tailoring to Your Environment
+The following inputs must be configured in an inputs ".yml" file for the profile to run correctly for your specific environment. More information about InSpec inputs can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
+ 
+```
+# Description: Username MySQL DB Server (e.g., 'root')
+user: ''
+
+# Description: Password MySQL DB Server (e.g., 'P@ssw0rd1')
+password: ''
+
+# Description: Hostname MySQL DB Server (e.g., 'localhost')
+host: ''
+
+# Description: Port MySQL DB Server
+port: 3306
+
+# Description: List of MySQL database users (e.g., ['root'])
+mysql_users: []   
+
+# Description: Set to true if the MySQL server has a slave configured
+is_mysql_server_slave_configured: false
+
+# Description: List of MySQL administrative users (e.g., ['root'])
+mysql_administrative_users: [] 
+
+# Description: List of MySQL users allows to modify or create data structures (e.g., ['root'])
+mysql_users_allowed_modify_or_create: [] 
+```
+
+## Running This Overlay Directly from Github
+
+```
+# How to run
+inspec exec https://github.com/njohnson11/oracle-mysql-ee-5.7-cis-overlay/archive/main.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
+```
+
+### Different Run Options
+
+  [Full exec options](https://docs.chef.io/inspec/cli/#options-3)
+
+## Running This Overlay from a local Archive copy 
+
+If your runner is not always expected to have direct access to GitHub, use the following steps to create an archive bundle of this overlay and all of its dependent tests:
+
+(Git is required to clone the InSpec profile using the instructions below. Git can be downloaded from the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) site.)
+
+When the __"runner"__ host uses this profile overlay for the first time, follow these steps: 
+
+```
+mkdir profiles
+cd profiles
+git clone https://github.com/njohnson11/oracle-mysql-ee-5.7-cis-overlay.git
+inspec arhive oracle-mysql-ee-5.7-cis-overlay
+inspec exec <name of generated archive> --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
+```
+
+For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
+
+```
+cd oracle-mysql-ee-5.7-cis-overlay
+git pull
+cd ..
+inspec arhive oracle-mysql-ee-5.7-cis-overlay --overwrite
+inspec exec <name of generated archive> --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
+```
+
+## Using Heimdall for Viewing the JSON Results
+
+The JSON results output file can be loaded into __[heimdall-lite](https://heimdall-lite.mitre.org/)__ for a user-interactive, graphical view of the InSpec results. 
+
+The JSON InSpec results file may also be loaded into a __[full heimdall server](https://github.com/mitre/heimdall)__, allowing for additional functionality such as to store and compare multiple profile runs.
+
+## Contributing and Getting Help
+To report a bug or feature request, please open an [issue](https://github.com/njohnson11/oracle-mysql-ee-5.7-cis-overlay/issues/new).
+
+### NOTICE 
+
+CIS Benchmarks are published by the Center for Internet Security (CIS), see: https://www.cisecurity.org/.
