@@ -1,3 +1,3 @@
-# Example InSpec Profile
+# Oracle MySQL 5.7 CIS Overlay
 
-This example shows the implementation of an InSpec profile.
+Overlay for the baseline InSpec profile at https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline with modifications based on provided requirements.
