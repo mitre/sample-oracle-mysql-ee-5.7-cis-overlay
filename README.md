@@ -1,4 +1,4 @@
-# oracle-mysql-ee-5.7-cis-overlay
+# sample-oracle-mysql-ee-5.7-cis-overlay
 InSpec profile overlay to validate the secure configuration of Oracle MySQL EE 5.7 against [CIS's](https://www.cisecurity.org/cis-benchmarks/) Oracle MySQL EE 5.7 Benchmark 1.0.0.
 
 ## Getting Started  
@@ -37,13 +37,16 @@ mysql_administrative_users: []
 
 # Description: List of MySQL users allows to modify or create data structures (e.g., ['root'])
 mysql_users_allowed_modify_or_create: [] 
+
+# Full path to MySQL configuration file
+mysql_conf: ''
 ```
 
 ## Running This Overlay Directly from Github
 
 ```
 # How to run
-inspec exec https://github.com/njohnson11/oracle-mysql-ee-5.7-cis-overlay/archive/main.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
+inspec exec https://github.com/njohnson11/sample-oracle-mysql-ee-5.7-cis-overlay/archive/main.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
 ### Different Run Options
@@ -61,18 +64,18 @@ When the __"runner"__ host uses this profile overlay for the first time, follow 
 ```
 mkdir profiles
 cd profiles
-git clone https://github.com/njohnson11/oracle-mysql-ee-5.7-cis-overlay.git
-inspec arhive oracle-mysql-ee-5.7-cis-overlay
+git clone https://github.com/njohnson11/sample-oracle-mysql-ee-5.7-cis-overlay.git
+inspec archive sample-oracle-mysql-ee-5.7-cis-overlay
 inspec exec <name of generated archive> --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
 For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
 
 ```
-cd oracle-mysql-ee-5.7-cis-overlay
+cd sample-oracle-mysql-ee-5.7-cis-overlay
 git pull
 cd ..
-inspec arhive oracle-mysql-ee-5.7-cis-overlay --overwrite
+inspec archive sample-oracle-mysql-ee-5.7-cis-overlay --overwrite
 inspec exec <name of generated archive> --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
@@ -83,7 +86,7 @@ The JSON results output file can be loaded into __[heimdall-lite](https://heimda
 The JSON InSpec results file may also be loaded into a __[full heimdall server](https://github.com/mitre/heimdall)__, allowing for additional functionality such as to store and compare multiple profile runs.
 
 ## Contributing and Getting Help
-To report a bug or feature request, please open an [issue](https://github.com/njohnson11/oracle-mysql-ee-5.7-cis-overlay/issues/new).
+To report a bug or feature request, please open an [issue](https://github.com/njohnson11/sample-oracle-mysql-ee-5.7-cis-overlay/issues/new).
 
 ### NOTICE 
 
