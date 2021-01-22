@@ -154,10 +154,10 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
         describe 'This control is not applicable on mysql on Microsoft systems' do
             skip 'This control is not applicable on mysql on Microsoft systems'
         end
-        only_if { os.linux? }
         describe mysql_conf(attribute('mysql_config_file')) do
             its('skip-grant-tables') { should cmp 'FALSE' }
         end
+        only_if { os.linux? }
     end
     control '4.6' do
         impact 0.0
@@ -469,7 +469,6 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
     control '6.12' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        only_if { os.linux? or os.windows? }
         query = %{SELECT LOAD_OPTION FROM information_schema.plugins WHERE PLUGIN_NAME='audit_log';}
         sql_session = mysql_session(attribute('user'), attribute('password'), attribute('host'), attribute('port'))
         audit_log_plugin = sql_session.query(query).stdout.strip
@@ -481,6 +480,8 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
         describe mysql_conf(attribute('mysql_config_file')) do
             its('mysqld.audit_log') { should cmp 'FORCE_PLUS_PERMANENT' }
         end
+        only_if { os.linux? or os.windows? }
+
     end
     control '7.1' do
         only_if { os.linux? or os.windows? }
@@ -499,7 +500,6 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
     end
     control '7.6' do
-        only_if { os.linux? or os.windows? }
         validate_password_length_query = %{SELECT @@validate_password_length}
         validate_password_mixed_case_count_query = %{SELECT @@validate_password_mixed_case_count}
         validate_password_number_count_query = %{SELECT @@validate_password_number_count}
@@ -565,6 +565,8 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
             it { should be_empty }
             end
         end
+        only_if { os.linux? or os.windows? }
+
     end
     control '7.7' do
         impact 0.0
