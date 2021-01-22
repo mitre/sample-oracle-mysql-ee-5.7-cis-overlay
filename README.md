@@ -11,7 +11,7 @@ Latest versions and installation options are available at the [InSpec](http://in
 Git is required to download the latest InSpec profiles using the instructions below. Git can be downloaded from the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) site. 
 
 ## Tailoring to Your Environment
-For the MySQL resource to be properly accessed, you must ensure that the server's `mysql.exe` file is in the PATH environment variable. First you will need to find the `mysql.exe` file, which should be under `C:\Program Files\MySQL\MySQL Server 5.7\bin`. Otherwise, it should be in the `bin` directory of wherever MySQL is installed. Then, add the full path to the directory containing the executable [as specfied here](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
+For the MySQL resource to be properly accessed, you must ensure that the server's `mysql.exe` file is in the PATH environment variable. First you will need to find the `mysql.exe` file, which should be under `C:\Program Files\MySQL\MySQL Server 5.1\bin`. Otherwise, it should be in the `bin` directory of wherever MySQL is installed. Then, add the full path to the directory containing the executable [as specfied here](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
 
 The following inputs must be configured in an inputs ".yml" file for the profile to run correctly for your specific environment. More information about InSpec inputs can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
 
@@ -41,14 +41,14 @@ mysql_administrative_users: []
 mysql_users_allowed_modify_or_create: [] 
 
 # Full path to MySQL configuration file
-mysql_conf: ''
+mysql_config_file: ''
 ```
 
 ## Running This Overlay Directly from Github
 
 ```
 # How to run
-inspec exec https://github.com/njohnson11/sample-oracle-mysql-ee-5.7-cis-overlay/archive/main.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
+inspec exec https://github.com/mitre/sample-oracle-mysql-ee-5.7-cis-overlay/archive/main.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
 ### Different Run Options
@@ -66,7 +66,7 @@ When the __"runner"__ host uses this profile overlay for the first time, follow 
 ```
 mkdir profiles
 cd profiles
-git clone https://github.com/njohnson11/sample-oracle-mysql-ee-5.7-cis-overlay.git
+git clone https://github.com/mitre/sample-oracle-mysql-ee-5.7-cis-overlay.git
 inspec archive sample-oracle-mysql-ee-5.7-cis-overlay
 inspec exec <name of generated archive> --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
@@ -88,7 +88,7 @@ The JSON results output file can be loaded into __[heimdall-lite](https://heimda
 The JSON InSpec results file may also be loaded into a __[full heimdall server](https://github.com/mitre/heimdall)__, allowing for additional functionality such as to store and compare multiple profile runs.
 
 ## Contributing and Getting Help
-To report a bug or feature request, please open an [issue](https://github.com/njohnson11/sample-oracle-mysql-ee-5.7-cis-overlay/issues/new).
+To report a bug or feature request, please open an [issue](https://github.com/mitre/sample-oracle-mysql-ee-5.7-cis-overlay/issues/new).
 
 ### NOTICE 
 
