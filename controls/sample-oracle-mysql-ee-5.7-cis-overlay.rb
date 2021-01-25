@@ -2,38 +2,38 @@
 include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
     control '1.1' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     
     control '1.2' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '1.3' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems' 
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This control is not applicable when running MySQL on Microsoft systems' 
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '1.4' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '1.5' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '2.1' do
@@ -41,9 +41,9 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
     end
     control '2.2' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This control is not applicable when running MySQL on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '2.3' do
@@ -74,65 +74,65 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
     end
     control '3.1' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This control is not applicable when running MySQL on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.2' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This control is not applicable when running MySQL on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.3' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.4' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.5' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.6' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.7' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This control is not applicable when running MySQL on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.8' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This control is not applicable when running MySQL on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '3.9' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
         end
     end
     control '4.1' do
@@ -142,30 +142,20 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
     end
     control '4.3' do
         impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
+        describe mysql_conf(attribute('mysql_config_file')) do
+            its('allow-suspicious-udfs') { should be_nil }
         end
-        only_if { os.linux? }
     end
     control '4.5' do
-        impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
-        end
         describe mysql_conf(attribute('mysql_config_file')) do
             its('skip-grant-tables') { should cmp 'FALSE' }
         end
-        only_if { os.linux? }
     end
     control '4.6' do
-        impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
+        describe mysql_conf(attribute('mysql_config_file')) do
+            its('skip_symbolic_links') { should cmp 'YES' }
         end
-        only_if { os.linux? }
     end
     control '4.8' do
         impact 0.0
@@ -406,26 +396,13 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
     end
-    control '6.2' do
-        impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
-        end
-        only_if { os.linux? }
-    end
-    control '6.4' do
-        impact 0.0
-        desc 'caveat', 'This control is not applicable on mysql on Microsoft systems'
-        describe 'This control is not applicable on mysql on Microsoft systems' do
-            skip 'This control is not applicable on mysql on Microsoft systems'
-        end
-        only_if { os.linux? }
-    end
     
     control '6.2' do
         impact 0.0
         desc 'caveat', 'This is Not Applicable since the related security control is not included in ***SPONSOR*** policy'
+        describe 'This control is not applicable when running MySQL on Microsoft systems' do
+            skip 'This control is not applicable when running MySQL on Microsoft systems'
+        end
     end
     control '6.3' do
         impact 0.0
@@ -565,8 +542,6 @@ include_controls 'oracle-mysql-ee-5.7-cis-baseline' do
             it { should be_empty }
             end
         end
-        only_if { os.linux? or os.windows? }
-
     end
     control '7.7' do
         impact 0.0
