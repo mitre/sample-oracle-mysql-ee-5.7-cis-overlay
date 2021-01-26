@@ -6,7 +6,18 @@ It is intended and recommended that InSpec and this profile overlay be run from 
 
 __For the best security of the runner, always install on the runner the _latest version_ of InSpec and supporting Ruby language components.__ 
 
-Latest versions and installation options are available at the [InSpec](http://inspec.io/) site.
+__The simplest way to install InSpec is to use this command for *nix or Mac:
+```
+curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec
+```
+
+__or this command for Windows (Powershell)__
+```
+. { iwr -useb https://omnitruck.chef.io/install.ps1 } | iex; install -project inspec
+```
+
+Latest versions and other installation options are available at the [InSpec](http://inspec.io/) site.
+
 
 Git is required to download the latest InSpec profiles using the instructions below. Git can be downloaded from the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) site. 
 
