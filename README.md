@@ -1,5 +1,5 @@
 # sample-oracle-mysql-ee-5.7-cis-overlay
-InSpec profile overlay to validate the secure configuration of Oracle MySQL EE 5.7 against [CIS's](https://www.cisecurity.org/cis-benchmarks/) Oracle MySQL EE 5.7 Benchmark 1.0.0.
+InSpec profile overlay for the [Oracle MySQL EE 5.7 CIS Baseline profile](https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline) to validate the secure configuration of Oracle MySQL EE 5.7 against the [CIS Oracle MySQL EE 5.7 Benchmark 1.0.0](https://www.cisecurity.org/cis-benchmarks/).
 
 ## Getting Started  
 It is intended and recommended that InSpec and this profile overlay be run from a __"runner"__ host (such as a DevOps orchestration server, an administrative management system, or a developer's workstation/laptop) against the target.
@@ -16,28 +16,28 @@ For the MySQL resource to be properly accessed, you must ensure that the server'
 The following inputs must be configured in an inputs ".yml" file for the profile to run correctly for your specific environment. More information about InSpec inputs can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
 
 ```
-# Description: Username MySQL DB Server (e.g., 'root')
+# Username MySQL DB Server (e.g., 'root')
 user: ''
 
-# Description: Password MySQL DB Server (e.g., 'P@ssw0rd1')
+# Password MySQL DB Server (e.g., 'P@ssw0rd1')
 password: ''
 
-# Description: Hostname MySQL DB Server (e.g., 'localhost')
+# Hostname MySQL DB Server (e.g., 'localhost')
 host: ''
 
-# Description: Port MySQL DB Server
+# Port MySQL DB Server
 port: 3306
 
-# Description: List of MySQL database users (e.g., ['root'])
+# List of MySQL database users (e.g., ['root'])
 mysql_users: []   
 
-# Description: Set to true if the MySQL server has a slave configured
+# Set to true if the MySQL server has a slave configured
 is_mysql_server_slave_configured: false
 
-# Description: List of MySQL administrative users (e.g., ['root'])
+# List of MySQL administrative users (e.g., ['root'])
 mysql_administrative_users: [] 
 
-# Description: List of MySQL users allows to modify or create data structures (e.g., ['root'])
+# List of MySQL users allows to modify or create data structures (e.g., ['root'])
 mysql_users_allowed_modify_or_create: [] 
 
 # Full path to MySQL configuration file (e.g. 'C:\Users\vagrant\MySQL\my.ini')
