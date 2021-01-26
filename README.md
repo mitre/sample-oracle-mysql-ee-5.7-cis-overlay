@@ -18,9 +18,6 @@ __or this command for Windows (Powershell)__
 
 Latest versions and other installation options are available at the [InSpec](http://inspec.io/) site.
 
-
-Git is required to download the latest InSpec profiles using the instructions below. Git can be downloaded from the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) site. 
-
 ## Tailoring to Your Environment
 For the MySQL resource to be properly accessed, you must ensure that the server's `mysql.exe` file is in the PATH environment variable. First you will need to find the `mysql.exe` file, which should be under `C:\Program Files\MySQL\MySQL Server 5.1\bin`. Otherwise, it should be in the `bin` directory of wherever MySQL is installed. Then, add the full path to the directory containing the executable [as specfied here](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
 
