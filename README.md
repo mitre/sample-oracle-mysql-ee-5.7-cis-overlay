@@ -40,7 +40,7 @@ mysql_administrative_users: []
 # Description: List of MySQL users allows to modify or create data structures (e.g., ['root'])
 mysql_users_allowed_modify_or_create: [] 
 
-# Full path to MySQL configuration file
+# Full path to MySQL configuration file (e.g. 'C:\Users\vagrant\MySQL\my.ini')
 mysql_config_file: ''
 ```
 
