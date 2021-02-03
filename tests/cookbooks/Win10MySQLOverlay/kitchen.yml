@@ -29,7 +29,7 @@ verifier:
   sudo: true
   reporter:
     - cli
-    - json:%{platform}-%{suite}-test-results.json
+    - json:%{suite}-results.json
   inspec_tests:
     - name: Oracle Cis 5.7 Overlay 
       path: ../../../
@@ -50,7 +50,7 @@ platforms:
       box: gusztavvargadr/windows-10 
       
 suites:
-  - name: vanilla
+  - name: Win10MySQL
     verifier:
       name: inspec
 

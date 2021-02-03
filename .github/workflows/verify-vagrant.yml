@@ -13,7 +13,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        suite: ['Win10MySQL']
+        suite: ['Win10MySQLOverlay']
       fail-fast: false
     env:
       CHEF_LICENSE: accept-silent
@@ -42,12 +42,12 @@ jobs:
           bundle install
       - name: Run kitchen test
         run: |
-          cd tests/cookbooks/Win10MySQL/
+          cd tests/cookbooks/Win10MySQLOverlay/
           bundle exec kitchen test ${{ matrix.suite }} 
-      - name: Display our Windows 10 MySQL results summary
+      - name: Display our ${{ matrix.suite }} results summary
         run: |
-          cd tests/cookbooks/Win10MySQL
-          bundle exec inspec_tools summary -j windows-10-mysql-test-results.json --json-counts | jq .
+          cd tests/cookbooks/Win10MySQLOverlay
+          bundle exec inspec_tools summary -j ${{ matrix.suite }}-results.json --json-counts | jq .
       - name: Save Test Result JSON
         uses: actions/upload-artifact@v2
         with:
