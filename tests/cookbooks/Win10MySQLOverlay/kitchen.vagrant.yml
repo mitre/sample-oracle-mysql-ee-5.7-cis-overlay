@@ -1,29 +1,29 @@
 # Description: Username MySQL DB Server (e.g., 'root') 
-user: 'vagrant'
+user: 'root'
 
 # Description: Password MySQL DB Server (e.g., 'P@ssw0rd1')
-password: 'vagrant'
+password: 'vagrantpassword'
 
 # Description: Hostname MySQL DB Server (e.g., 'localhost')
 host: 'localhost'
 
 # Description: Port MySQL DB Server (e.g., 3306)
-port: 33306
+port: 3306
 
 # Description: Approved version expected to be installed (e.g., ['5.7.31'])
 approved_mysql_version: '5.1.73'
 
 # Description: List of MySQL database users (e.g., ['rdsadmin','testuser1','user2'])
-mysql_users: ['vagrant']   
+mysql_users: ['root']   
 
 # Description: Set to true if the MySQL server has a slave configured
 is_mysql_server_slave_configured: false
 
 # Description: List of MySQL administrative users (e.g., ['rdsadmin','testadmin1','admin2'])
-mysql_administrative_users: ['vagrant'] 
+mysql_administrative_users: ['root'] 
 
 # Description: List of MySQL users allows to modify or create data structures (e.g., ['rdsadmin'])'
-mysql_users_allowed_modify_or_create: ['vagrant'] 
+mysql_users_allowed_modify_or_create: ['root'] 
 
 # Location of the MySQL config file
-mysql_config_file: "C:\\Users\\vagrant\\MySQL\\my.ini"
+mysql_config_file: "C:\\MySQL\\my.ini"

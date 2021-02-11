@@ -1,10 +1,10 @@
 # Policyfile.rb - Describe how you want Chef Infra Client to build your system.
 
-name 'windows-10-mysql'
+name 'Win10MySQLOverlay'
 
 default_source :supermarket
 
-run_list 'windows-10-mysql::default'
+run_list 'Win10MySQLOverlay::default'
 
-cookbook 'windows-10-mysql', path: '.'
+cookbook 'Win10MySQLOverlay', path: '.'
 

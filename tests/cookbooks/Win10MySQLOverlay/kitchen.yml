@@ -3,13 +3,15 @@ driver:
   name: vagrant
   guest: :windows
   gui: false
+  network:
+    - ["forwarded_port", {guest: 3306, host: 3306}]
   winrm:
     username: vagrant
     password: vagrant
   customize:
     cpus: 2
     vram: 36 
-    memory: 4096
+    memory: 4096 
     accelerate3d: "off"
     accelerate2dvideo: "off"
     audio: "none"
@@ -50,7 +52,9 @@ platforms:
       box: gusztavvargadr/windows-10 
       
 suites:
-  - name: Win10MySQL
+  - name: Win10MySQLOverlay
+    run_list: 
+      - recipe[Win10MySQLOverlay::default]
     verifier:
       name: inspec
 

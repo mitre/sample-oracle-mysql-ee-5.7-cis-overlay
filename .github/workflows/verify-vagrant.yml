@@ -46,7 +46,7 @@ jobs:
           bundle exec kitchen test ${{ matrix.suite }} 
       - name: Display our ${{ matrix.suite }} results summary
         run: |
-          cd tests/cookbooks/Win10MySQLOverlay
+          cd tests/cookbooks/Win10MySQLOverlay/
           bundle exec inspec_tools summary -j ${{ matrix.suite }}-results.json --json-counts | jq .
       - name: Save Test Result JSON
         uses: actions/upload-artifact@v2

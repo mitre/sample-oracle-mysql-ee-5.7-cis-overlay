@@ -1,1 +1,1 @@
-name "Win10MySQL"
+name "Win10MySQLOverlay"
