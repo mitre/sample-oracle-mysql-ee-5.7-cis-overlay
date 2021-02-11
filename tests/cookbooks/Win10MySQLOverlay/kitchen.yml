@@ -1,0 +1,61 @@
+---
+driver:
+  name: vagrant
+  guest: :windows
+  gui: false
+  network:
+    - ["forwarded_port", {guest: 3306, host: 3306}]
+  winrm:
+    username: vagrant
+    password: vagrant
+  customize:
+    cpus: 2
+    vram: 36 
+    memory: 4096 
+    accelerate3d: "off"
+    accelerate2dvideo: "off"
+    audio: "none"
+    usbcardreader: "off"
+    vrde: "off"
+    usb: "off"
+    clipboard: "disabled"
+    graphicscontroller: "vboxsvga" 
+
+provisioner:
+  name: chef_zero
+  product_name: chef
+  product_version: 15
+
+verifier:
+  name: inspec
+  sudo: true
+  reporter:
+    - cli
+    - json:%{suite}-results.json
+  inspec_tests:
+    - name: Oracle Cis 5.7 Overlay 
+      path: ../../../
+  input_files:
+    - kitchen.vagrant.yml
+  load_plugins: true
+
+transport:
+  name: winrm
+
+platforms:
+  - name: windows-10-mysql
+    os_type: windows
+    shell_type: powershell
+    driver:
+      name: vagrant
+      vm_hostname: windows-10-mysql
+      box: gusztavvargadr/windows-10 
+      
+suites:
+  - name: Win10MySQLOverlay
+    run_list: 
+      - recipe[Win10MySQLOverlay::default]
+    verifier:
+      name: inspec
+
+

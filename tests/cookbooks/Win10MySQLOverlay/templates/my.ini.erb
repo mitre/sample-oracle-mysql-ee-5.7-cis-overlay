@@ -1,0 +1,54 @@
+[client]
+port=<%= @mysql_port %>
+
+[mysql]
+default-character-set=latin1
+
+[mysqld]
+port=<%= @mysql_port %>
+
+basedir=<%= @mysql_path %>
+
+datadir=<%= @mysql_path %>/Data
+
+basedir=<%= @mysql_path %>
+
+character-set-server=latin1
+
+default-storage-engine=InnoDB
+
+sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+
+max-connections=100
+
+query_cache_size=0
+
+table_cache=256
+
+tmp_table_size=103M
+
+thread_cache_size=8
+
+myisam_max_sort_file_size=100G
+
+# myisam_soft_buffer_size=205M
+
+key_buffer_size=175M
+
+read_buffer_size=64K
+
+read_rnd_buffer_size=256K
+
+sort_buffer_size=256K
+
+innodb_additional_mem_pool_size=7M
+
+innodb_flush_log_at_trx_commit=1
+
+innodb_log_buffer_size=3499K
+
+innodb_buffer_pool_size=339M
+
+innodb_log_file_size=170M
+
+innodb_thread_concurrency=8
