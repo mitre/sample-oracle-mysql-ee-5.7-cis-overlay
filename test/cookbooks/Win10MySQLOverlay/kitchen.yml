@@ -31,7 +31,7 @@ verifier:
   sudo: true
   reporter:
     - cli
-    - json:%{suite}-results.json
+    - json:%{suite}-test-results.json
   inspec_tests:
     - name: Oracle Cis 5.7 Overlay 
       path: ../../../

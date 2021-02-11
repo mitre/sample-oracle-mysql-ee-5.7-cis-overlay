@@ -48,9 +48,9 @@ jobs:
       - name: Display our ${{ matrix.suite }} results summary
         run: |
           cd test/cookbooks/Win10MySQLOverlay/
-          bundle exec inspec_tools summary -j ${{ matrix.suite }}-results.json --json-counts | jq .
+          bundle exec inspec_tools summary -j ${{ matrix.suite }}-test-results.json --json-counts | jq .
       - name: Save Test Result JSON
         uses: actions/upload-artifact@v2
         with:
-          path: ./*-results.json
-
+          path: test/cookbooks/Win10MySQLOverlay/*-results.json
+          if-no-files-found: error
