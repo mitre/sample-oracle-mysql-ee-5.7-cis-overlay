@@ -55,4 +55,3 @@ jobs:
           path: test/cookbooks/Win10MySQLOverlay/*-results.json
           if-no-files-found: error
           name: ${{ matrix.suite }}-results
-          overwrite: true
